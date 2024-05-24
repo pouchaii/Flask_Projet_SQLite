@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Informations du Client</title>
+    <title>Clients</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,24 +22,26 @@
     </style>
 </head>
 <body>
-    <h1>Informations du Client</h1>
-    <table aria-label="Informations détaillées du client">
-        <caption>Informations détaillées du client</caption>
+    <h1>Liste des Clients</h1>
+    <table>
+        <caption>Description détaillée des clients. Cette table inclut l'ID, la date de création, le nom, le prénom, et l'adresse de chaque client.</caption>
         <thead>
             <tr>
                 <th>ID</th>
+                <th>Création</th>
                 <th>Nom</th>
                 <th>Prénom</th>
                 <th>Adresse</th>
             </tr>
         </thead>
         <tbody>
-            {% for client in data %}
+            {% for row in data %}
             <tr>
-                <td>{{ client[0] }}</td>
-                <td>{{ client[1] }}</td>
-                <td>{{ client[2] }}</td>
-                <td>{{ client[3] }}</td>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -47,3 +49,4 @@
     <a href="/">Retour à l'accueil</a>
 </body>
 </html>
+
